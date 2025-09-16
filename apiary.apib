@@ -1,0 +1,47 @@
+FORMAT: 1A
+HOST: https://example.com
+
+## Root Element
+
+**Element:** `jobs`  
+**Description:** Container for all job entries.
+
+## Job Element
+
+**Element:** `job`  
+**Description:** Represents a single job posting.
+
+### Fields
+
+| Field             | Type      | Required | Description |
+|------------------|----------|---------|-------------|
+| source           | string   | Yes     | The source of the job posting |
+| company          | string   | Yes     | The company name |
+| title            | string   | Yes     | The job title |
+| req_id           | string   | No      | Job identifier from the source |
+| referencenumber  | string   | No      | Internal reference number |
+| category         | string   | No      | Job category |
+| country          | string   | No      | Country of the job |
+| state            | string   | No      | State or region |
+| city             | string   | No      | City |
+| postalcode       | string   | No      | Postal code |
+| address          | string   | No      | Street address |
+| latitude         | string   | No      | Geographical latitude |
+| longitude        | string   | No      | Geographical longitude |
+| remote_status    | string   | No      | Remote work status |
+| jobtype          | string   | No      | Job type (Full-time, Part-time, etc.) |
+| date             | datetime | No      | Publication date |
+| validThrough     | datetime | No      | Expiration date of the job posting |
+| scrape_time      | datetime | Yes     | Timestamp when the data was scraped |
+| salary           | string   | No      | Salary information (general) |
+| salary_min       | float    | No      | Minimum salary |
+| salary_max       | float    | No      | Maximum salary |
+| salary_currency  | string   | No      | Currency of the salary |
+| salary_timeframe | string   | No      | Timeframe for salary (hourly, monthly, yearly) |
+| education        | string   | No      | Required education level |
+| experience       | string   | No      | Required experience |
+| description      | string   | Yes     | Job description, can include HTML/formatting |
+| url              | string   | No      | URL of the job posting |
+| detail-url       | string   | No      | Detailed URL for job description |
+| apply-url        | string   | No      | Direct application URL |
+| schema           | string   | No      | Optional schema information |
